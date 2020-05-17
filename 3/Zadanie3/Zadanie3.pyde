@@ -36,4 +36,6 @@ def draw():
     s.endShape(CLOSE)
     shape(s, 25, 25)
 
-    
+  # 1,75
+  # przy zaznaczeniu p i strzałce w prawo powinno się odznaczyć p (przy jednoczesnym zaznaczeniu k, co działa)
+  # same strzałki nie powinny diząłać, miały przenosić już istniejące zaznaczenie
