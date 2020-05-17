@@ -10,7 +10,7 @@ def setup():
     
     size(400, 520)
     
-    img = loadImage("Zdjecie do dowodu.jpg")
+    img = loadImage("dowod.jpg")
     
     okulary = loadImage("okulary.png")
     was = loadImage("was.png")
@@ -34,8 +34,11 @@ def draw():
                 image(was, 103, 300, width/2, height/4)
             elif keyCode == UP:
                 image(okulary, 78, 210, width-150, height/4)
-                
-    endRecord()
+
+def keyReleased():            
+    endRecord() # żeby zapisało z atrybutami, przetworzony plik, trzeba kończyć dopiero gdy się narysują (po wciśnięciu/zwolnieniu klawisza)
     
 def mousePressed():
     exit()
+    
+#1,75p
