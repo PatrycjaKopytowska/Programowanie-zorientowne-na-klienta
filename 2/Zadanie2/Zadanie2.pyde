@@ -3,8 +3,7 @@ def setup():
     frameRate(100)                     
     global slownik_kolorow    
                     
-    global x
-    global y
+    global x, y # można też jednolinijkowo
     x = 0  
     y = height/2     
                                                               
@@ -21,15 +20,14 @@ def setup():
 def draw():  
     
     
-    global x
-    global y
+    global x, y
           
     background (255, 230, 204)
                       
     global iteracja_programu
     iteracja_programu +=1
                                      
-    stroke(0,0,255,80)                
+     # stroke(0,0,255,80)  # to redundantne              
     stroke(*slownik_kolorow["niebieski"]) 
                        
     x+=1
@@ -49,3 +47,5 @@ def draw():
     
     if mousePressed:
         exit()
+        
+# 2pkt
