@@ -1,32 +1,35 @@
 class KurekWody():
-    ilosc_wcisnietych_pokretel_klasy = 1
-    def __init__(self, arg_x, arg_y, arg_r):
+    def __init__(self, arg_x, arg_y, arg_r, czyCieply): # dzieki temu, że przekazany jako argument może być różny na starcie
         self.obrot = 0
-        self.wcisniety = False
+        self.wcisniety = czyCieply # teraz jest argumentem instancji nie klasy, więc jest zapamiętywany dla każdego obiektu oddzielnie
         self.x = arg_x
         self.y = arg_y
         self.r = arg_r
     def rysuj(self):
-        arc(self.x, self.y, self.r, self.r, 0+radians(self.obrot+90), PI + radians(self.obrot+90), PIE)
-        arc(self.x, self.y, self.r, self.r, 0+radians(self.obrot+270), PI + radians(self.obrot+270), PIE)
-    def obroc(self, stopnie):
-        self.obrot += stopnie
-    def wcisnij(self):
-        KurekWody.ilosc_wcisnietych_pokretel_klasy *= -1
-        self.wcisniety = not self.wcisniety
         if self.wcisniety:
             fill(255,0,0)
         else:
             fill(0,0,255)
+        arc(self.x, self.y, self.r, self.r, 0+radians(self.obrot+90), PI + radians(self.obrot+90), PIE)
+        arc(self.x, self.y, self.r, self.r, 0+radians(self.obrot+270), PI + radians(self.obrot+270), PIE)
+          
+    def obroc(self, stopnie):
+        self.obrot += stopnie
+    def wcisnij(self):
+        self.wcisniety = not self.wcisniety
             
 def setup():
     size(400,400)
     global kurek_z_piekla
     global kurek_z_krainy_lodu
-    kurek_z_piekla = KurekWody(width/2-100, height/2, 50)
-    kurek_z_krainy_lodu = KurekWody(width/2+100, height/2, 50)
+    kurek_z_piekla = KurekWody(width/2-100, height/2, 50, True)
+    kurek_z_krainy_lodu = KurekWody(width/2+100, height/2, 50, False)
+    
 def mouseClicked():
-    kurek_z_piekla.wcisnij()
+    if mouseX<width/2:
+        kurek_z_piekla.wcisnij()
+    else:
+        kurek_z_krainy_lodu.wcisnij()
     
     
 def mouseWheel(event):
@@ -39,9 +42,7 @@ def draw():
     background(120)
     kurek_z_piekla.rysuj()
     kurek_z_krainy_lodu.rysuj()
-    print(KurekWody.ilosc_wcisnietych_pokretel_klasy)
     
-#chciałam wykombinować jak ominąć potrzebę zmiany kolorów obiektów osobno jednak przerosło mnie to, 
-#nie wiedziałam też już jak wybrnąć z piekielnych kurków
-#zostawiam więc kod w takiej formie, zwłaszcza że i tak bardzo spóźniony
-    
+#0,75pkt 
+# liczył się pomysł na klasę, ale też na atrybuty i metody, a te zostały jak u mnie w kodzie, więc nie mogę za nie zapunktować
+# nie jestem pewna, co chciałaś osiągnąć, ale w jakiś sposób naprawiłam, sprawdź, może o to chodziło  
