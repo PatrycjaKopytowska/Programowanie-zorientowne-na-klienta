@@ -1,0 +1,11 @@
+Klasa_Bankomat
+Atrybut_dostêpne_dzia³ania
+Metoda_zapytaj_o_pin
+Metoda_wydaj
+Metoda_odbierz
+Metoda_wyœwietl stan
+Klasa_U¿ytkownik
+Metoda_wyp³ata
+Metoda_wp³ata
+Metoda_sprawdŸ_stan
+
