@@ -10,7 +10,7 @@ class Kwadrat():
 class KolorowyKwadrat(Kwadrat): # dziedziczymy po klasie Kwadrat aby móć skorzystać z jej funkcjonalności
     def sketchKolorowy(self, x, y):
         Kwadrat.sketch(self, x, y) # korzystamy z metody klasy bazowej:
-        fill(255, 153, 153)
+        fill(255, 153, 153) # wypadałoby zapamiętać kolor sprzed zmiany i przywrócić go po narysowaniu, bo obecnie, wszystko narysowane po tym kolorowymkwadracie będzie w tym kolorze
         
 def setup():
     size(500, 500)
@@ -24,3 +24,6 @@ def setup():
     malyKolorowyKwadrat.sketchKolorowy(230, 210)
     malyKolorowyKwadrat = KolorowyKwadrat(30.0)
     malyKolorowyKwadrat.sketchKolorowy(230, 310)
+
+# plus do aktywności za zabawę w ustawianie ;)
+# 1,75pkt
