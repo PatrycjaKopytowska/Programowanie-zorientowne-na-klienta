@@ -37,6 +37,7 @@ def setup():
     benio = Dog('Benio')
     skrypcik = Cat('Skrypcik')
     Kliford = Dog('Kliford')
+    # a gdzie panda? ;)
     global list_of_pets
     list_of_pets = [rex, benio, skrypcik, Kliford]
     print(isinstance(skrypcik, Pet))
@@ -50,3 +51,5 @@ def mouseClicked():
         pet.speak()
         if isinstance(pet, Dog):
             pet.gimmePaw()
+            
+# 1,25pkt
