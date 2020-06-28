@@ -3,9 +3,13 @@ Atrybut_dostêpne_dzia³ania
 Metoda_zapytaj_o_pin
 Metoda_wydaj
 Metoda_odbierz
-Metoda_wyœwietl stan
-Klasa_U¿ytkownik
+Metoda_wyœwietl_stan
+# brakuje mi conajmniej informacji ile w danym bankomacie jest akurat fizycznej gotówki
+Klasa_U¿ytkownik # u¿ytkownik mo¿emieæ wile kont i kart, lepsza by³¹by jednoznaczna: karta lub konto
 Metoda_wyp³ata
 Metoda_wp³ata
 Metoda_sprawdŸ_stan
+# a pin?
+
+# 1/1,5pkt za t¹ czêœæ
 
